@@ -19,8 +19,8 @@ In this home lab we're going to walk through how to create an Active Directory h
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Create a Domain controller: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Create Our Virtual Machines: <br/>
+<img src="https://imgur.com/a/qAkUcr6" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Select the disk:  <br/>
