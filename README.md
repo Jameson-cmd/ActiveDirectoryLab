@@ -81,7 +81,6 @@ Install Active Directory Domain Serves: <br />
  Rename this PC: <br />
   - <b> Right click the start menu and click system<br />
    - <b> Click rename this PC<br />
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 
 <!--
