@@ -81,6 +81,15 @@ Install Active Directory Domain Serves: <br />
  Rename this PC: <br />
   - <b> Right click the start menu and click system<br />
    - <b> Click rename this PC<br />
+ - <b> Under roles select Active Directory Domain Services<br />
+- <b>click next<br />
+- <b>click install<br />
+- <b>On the dashboard click on the flag in the upper right corner<br />
+- <b> Click promote the server to a domain controller<br />
+_ <b> In the deployment configuration click add a new forest <br />
+-<b> Give your domain a name (mydomain.com) <br />
+-<b>In the Domain Controller Options enter a password<br />
+-<b> Click next, and then install <br />
 </p>
 
 <!--
