@@ -89,7 +89,8 @@ Install Active Directory Domain Serves: <br />
 _ <b> In the deployment configuration click add a new forest <br />
 -<b> Give your domain a name (mydomain.com) <br />
 -<b>In the Domain Controller Options enter a password<br />
--<b> Click next, and then install <br />
+-<b> Click next(3), and then install <br />
+- <b>Now that the Active Directory Domain Service was installed the computer will automatically restart<b/>
 </p>
 
 <!--
