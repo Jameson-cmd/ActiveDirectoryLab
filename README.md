@@ -107,20 +107,37 @@ Install Active Directory Domain Serves: <br />
   - <b>Inside the lower box enter "Domain Admins" and click Check names, then click okay and apply </b>
    - <b>Now log out and this time log in as "Other user"</b>
    - <b>Here you will insert the new user and password you just created(example:j-young, Password1)<br/>
- <h2>Installing RAS/NAS</h2>
-  This will allow the Windows10 client to be on this private virtual network but still be able to acess the internet through the domain controller <br />
-  - <b>Click Manage at the top right of the dashboard and select "add roles and features"<br />
-   - <b>select Role-based or feature-based installation<br />
-    <b>Next select the server from the Server pool box and and click next<br />
-     <b>Under roles select Remote Access<br />
-</p>
 
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+ <h2>Installing RAS/NAS</h2>
+ 
+  This will allow the Windows10 client to be on this private virtual network but still be able to acess the internet through the domain controller <br />
+  <ul>
+  <li>Click Manage at the top right of the dashboard and select "add roles and features"</li>
+    <li>select Role-based or feature-based installation</li>
+    <li>Next select the server from the Server pool box and and click next</li>
+      <li> Under roles select Remote Access</li>
+       <li>Next under roles services check off (RAS) and click add feature</li>
+      <li>Click next and install</li>
+      <li>Navigate to the dashboard and select the tools drop down menu and click on routing and remote access</li>
+     <li>Right click DC (local) and select configure and enable routing and remote access</li>
+     <li>Select Network address translation(NAT)</li>
+      <li>Next select the interface named _INTERNET_(this will be the interface used to connect to the internet)</li>
+      <li>Select next then click finish</li>
+      <h2>Setting up a DHCP server on the main controller </h2>
+      <li>This will allow the Windows10 client to get a IP address that will let them access the internet</li>
+     <li>Navigate to the dashboard and select add roles and features</li>
+     <li>Click next then make sure "Role-based or feature-based installion" is selected then click next</li>
+     <li>Select "DC mydomain.com" server from the server pool and click next</li>
+     <li>Select DHCP Server under Roles and click next, next, next, install</li>
+     </ul>
+<h2>Setting the Scope</h2>
+<ul>
+      <li>The purpose of DHCP is to allow client computers on the network to automatically get there IP addresses </li>
+       <li>Navigate to the dashboard and click on tools and select DHCP</li>
+  <li>Click "dc.mydoman.com" to expand the menu, select IPv4 and select New Scope</li>
+   <li>Name the scope.You can name it after whatever the IP range is.(example 172.16.0.100-200) then click next</li>
+    <li>Insert the start IP address(172.16.0.100) and the End IP address(172.16.0.200) Length(24) subnet mask(255.255.255.0) then click next</li>
+     <li>Configure DHCP Options(you will select yes, i want to configure these options now) this tells the client which server to use for DNS and Gateway</li>
+      <li>For Router(Default Gateway) insert IP address 172.16.0.1 and click add</li>
+    </ul>
+</p>
