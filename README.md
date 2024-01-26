@@ -85,12 +85,34 @@ Install Active Directory Domain Serves: <br />
 - <b>click next<br />
 - <b>click install<br />
 - <b>On the dashboard click on the flag in the upper right corner<br />
-- <b> Click promote the server to a domain controller<br />
-_ <b> In the deployment configuration click add a new forest <br />
--<b> Give your domain a name (mydomain.com) <br />
--<b>In the Domain Controller Options enter a password<br />
--<b> Click next(3), and then install <br />
+- <b>Click promote the server to a domain controller<br />
+- <b>In the deployment configuration click add a new forest <br />
+- <b>Give your domain a name (mydomain.com) <br />
+- <b>In the Domain Controller Options enter a password<br />
+- <b>Click next(3), and then install <br />
 - <b>Now that the Active Directory Domain Service was installed the computer will automatically restart<b/>
+- <b> Log in with your admin account password<br />
+
+<h2>Creating your custom admin account</h2>
+ 
+- <b>Click start icon(bottom left corner) <br />
+ - <b>Select Windows Administrative tools > Active Directory Users and Computers <br />
+  - <b>Create a organizational unit by right clicking mydomain.com, then seledt New > Organization Unit<br />
+   - <b>Name it _Admins<br />
+  - <b>Right click the _Admins folder to create a new user </b>
+  - <b>Insert you first and last name(example: Jameson Young)<br />
+  - <b>The User logon name is commonly configured as initial, "-", last name(example j-young)
+  - <b>Next select a password<br />
+  - <b>To make the new user an admin right click the new user and go to properties > member of > add <br />
+  - <b>Inside the lower box enter "Domain Admins" and click Check names, then click okay and apply </b>
+   - <b>Now log out and this time log in as "Other user"</b>
+   - <b>Here you will insert the new user and password you just created(example:j-young, Password1)<br/>
+ <h2>Installing RAS/NAS</h2>
+  This will allow the Windows10 client to be on this private virtual network but still be able to acess the internet through the domain controller <br />
+  - <b>Click Manage at the top right of the dashboard and select "add roles and features"<br />
+   - <b>select Role-based or feature-based installation<br />
+    <b>Next select the server from the Server pool box and and click next<br />
+     <b>Under roles select Remote Access<br />
 </p>
 
 <!--
