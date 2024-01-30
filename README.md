@@ -123,7 +123,8 @@ Install Active Directory Domain Serves: <br />
      <li>Select Network address translation(NAT)</li>
       <li>Next select the interface named _INTERNET_(this will be the interface used to connect to the internet)</li>
       <li>Select next then click finish</li>
-   
+  </ul>
+  <ul>
       <h2>Setting up a DHCP server on the main controller </h2>
       <li>This will allow the Windows10 client to get a IP address that will let them access the internet</li>
      <li>Navigate to the dashboard and select add roles and features</li>
@@ -155,7 +156,7 @@ Install Active Directory Domain Serves: <br />
   <li>Click configure this local server and then were going to disable the internet explorer enhanced security</li>
  <li>Click ON, then turn off Administrators and Users and click okay</li>
   <li>Copy the link to the source code for the  powershell script</li>
- <li>o to the domain controller and open up internet explorer and click okay</li>
+ <li>Go to the domain controller and open up internet explorer and click okay</li>
   <li>Then paste the link and press enter</li>
    <li>download the file and save as to the desktop so its easy to find</li>
  <li>Extract the script on the desktop</li> 
@@ -175,5 +176,5 @@ Install Active Directory Domain Serves: <br />
 
   
 
-    </ul>
+   
 </p>
