@@ -123,6 +123,7 @@ Install Active Directory Domain Serves: <br />
      <li>Select Network address translation(NAT)</li>
       <li>Next select the interface named _INTERNET_(this will be the interface used to connect to the internet)</li>
       <li>Select next then click finish</li>
+   
       <h2>Setting up a DHCP server on the main controller </h2>
       <li>This will allow the Windows10 client to get a IP address that will let them access the internet</li>
      <li>Navigate to the dashboard and select add roles and features</li>
@@ -130,6 +131,7 @@ Install Active Directory Domain Serves: <br />
      <li>Select "DC mydomain.com" server from the server pool and click next</li>
      <li>Select DHCP Server under Roles and click next, next, next, install</li>
      </ul>
+     
 <h2>Setting the Scope</h2>
 <ul>
       <li>The purpose of DHCP is to allow client computers on the network to automatically get there IP addresses </li>
@@ -137,7 +139,41 @@ Install Active Directory Domain Serves: <br />
   <li>Click "dc.mydoman.com" to expand the menu, select IPv4 and select New Scope</li>
    <li>Name the scope.You can name it after whatever the IP range is.(example 172.16.0.100-200) then click next</li>
     <li>Insert the start IP address(172.16.0.100) and the End IP address(172.16.0.200) Length(24) subnet mask(255.255.255.0) then click next</li>
+    <li>Lease duration is how long a computer can have that ip address before it needs to be refreshed(for this example we wil leave it at 8)</li>
      <li>Configure DHCP Options(you will select yes, i want to configure these options now) this tells the client which server to use for DNS and Gateway</li>
       <li>For Router(Default Gateway) insert IP address 172.16.0.1 and click add</li>
+      <li>Click Next, You need to add an ip address for a router used by clients(this is where you will enter the domain controller's ip address 172.16.0.1)</li>
+  <li> Click Add, then click next</li>
+ <li>Next you will specify the parent domain(mydomain.com) you want the client computers on your network to use for DNS name resolution </li>
+ <li>Click Next skipping WINS server</li>
+  <li>Select yes  i want toactivate the scope now and click next and finish</li>
+   <li>You may need to right click the dhcp server and select authorize</li>
+    <li>Right click IPv4 and select refresh(IPv4 should now be green)</li>
+
+ <li>Now were going to use powershell scipt to create a whole list of sample users</li>
+ <li>Navigate to the domain controller dashboard</li>
+  <li>Click configure this local server and then were going to disable the internet explorer enhanced security</li>
+ <li>Click ON, then turn off Administrators and Users and click okay</li>
+  <li>Copy the link to the source code for the  powershell script</li>
+ <li>o to the domain controller and open up internet explorer and click okay</li>
+  <li>Then paste the link and press enter</li>
+   <li>download the file and save as to the desktop so its easy to find</li>
+ <li>Extract the script on the desktop</li> 
+ <li>Open the folder and open the text file called names</li>
+ <li>At the top place your name(first and last) then save and close</li>
+<li>Were going to this file to programmatically create all the sample users</li>
+<li>Next click on the start menu and navigate to windows powershell</li> 
+<li>Under the drop down menu select Windows Powershell ISE, right click and go to more and run as administrator </li>
+
+ <li>Click on open script and go to the desktop and open up the powershell script </li>
+ <li>Next we have to enable the execution of all scripts on this server</li>
+ <li>Enter "Set-ExecutionPolicy Unrestricted" into the terminal and click enter</li>
+ <li> Say yes to all</li>
+
+
+
+
+  
+
     </ul>
 </p>
